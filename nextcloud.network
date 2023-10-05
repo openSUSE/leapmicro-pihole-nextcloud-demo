@@ -1,4 +1,4 @@
-# Put this under ~/.config/containers/systemd/nextcloud.network
+# Put this under /root/.config/containers/systemd/nextcloud.network
 # run systemctl daemon-reload --user
 
 [Network]
