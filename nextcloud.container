@@ -1,4 +1,4 @@
-# Put this under .config/containers/systemd/nextcloud.container
+# Put this under /root/.config/containers/systemd/nextcloud.container
 # You will want to manually create /root/nextcloud
 
 [Unit]
