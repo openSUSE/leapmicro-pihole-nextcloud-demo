@@ -1,0 +1,30 @@
+# Put this under .config/containers/systemd/nextcloud.container
+# You will want to manually create /root/nextcloud
+
+[Unit]
+Description=Nextcloud container
+After=nextclouddb.service nextcloudredis.container
+
+[Container]
+Image=docker.io/nextcloud:apache
+
+#flag for autoupdates
+Label=io.containers.autoupdate=registry
+
+# Use volume and network defined below
+Volume=/root/nextcloud/nextcloud:/var/www/html:z
+Volume=/root/nextcloud/logs:/var/log/apache2:z
+Network=nextcloud.network
+
+#Ports
+PublishPort=8080:80
+
+#reference envfile for secrets
+EnvironmentFile=/root/nextcloud/db.env
+
+[Service]
+Restart=always
+
+[Install]
+# Start by default on boot
+WantedBy=multi-user.target default.target
