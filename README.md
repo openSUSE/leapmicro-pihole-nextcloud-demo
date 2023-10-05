@@ -1,4 +1,4 @@
-# linuxdays2023-leapmicro-pihole-nextcloud-demo
+# leapmicro-pihole-nextcloud-demo
 Config files used during my talk about Running Pi-Hole and Nextcloud on Leap Micro at Linux Days 2023
 
 The nextcloud example is using quadlets https://www.redhat.com/sysadmin/quadlet-podman
