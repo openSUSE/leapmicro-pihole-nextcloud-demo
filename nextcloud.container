@@ -8,6 +8,8 @@ After=nextclouddb.service nextcloudredis.container
 [Container]
 Image=docker.io/nextcloud:apache
 
+AutoUpdate=registry
+
 #flag for autoupdates
 Label=io.containers.autoupdate=registry
 
